@@ -1,27 +1,60 @@
 
 .norma{
     width: 100%;
-    padding: 0 5%;
+    padding: 20% 5%;
     text-align: center;
     justify-content: center;
     display: flex;
     align-items: center;
-    flex-direction: column;
     gap: 30px;
-    height: 30vh;
-    background-color: var(--color--dark--blue);
+    height: 50vh;
+    background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/6f344273-4c43-4154-5462-b710d2b8e800/public');
+    background-position: center;
+    background-size: cover;
     color: var(--color--white);
 }
 
-.norma h1{
-    font-size: 28px;
-    font-weight: 400;
-    width: 40%;
+.norma div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    text-align: left;
+    width: 50%;
 }
 
-.norma p {
-    font-size: 14px;
+.norma div:nth-child(2){
     width: 50%;
+    height: 45vh;
+}
+
+.norma div:nth-child(2) video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.norma div h1{
+    font-size: 28px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.norma div button{
+    background-color: var(--color--green);
+    color: var(--color--white);
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+.norma div p {
+    font-size: 14px;
+    width: 80%;
 }
 
 .sobre{
@@ -100,8 +133,25 @@
 
 @media (max-width: 768px){
     .norma{
-        height: 50vh;
+        height: auto;
+        padding: 15% 2.5%;
         gap: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .norma div{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .norma div:nth-child(2){
+        width: 100%;
+    }
+
+    .norma div video{
+        width: 100%;
     }
 
     .norma h1 {
@@ -109,7 +159,7 @@
     }
 
     .norma p{
-        width: 90%;
+        width: 100%;
     }
     .sobre{
         flex-direction: column;
