@@ -1,0 +1,337 @@
+
+.home{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 25px;
+    overflow: hidden;
+}
+
+.home-left{
+    width: 45%;
+    height: 70%;
+    background-color: var(--color--white);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 2;
+    border-radius: 10px;
+    padding: 10px 10px 20px 10px;
+}
+
+.home-left div{
+    background-color: var(--color--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5%;
+    height: 12.5%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.home-left div img{
+    height: 100%;
+}
+
+.home-left div button{
+    padding: 7px 15px;
+    color: var(--color--blue);
+    font-weight: 600;
+    font-size: .8rem;
+    background-color: var(--color--white);
+    cursor: pointer;
+    transition: all .2s ease;
+    border-radius: 5px;
+}
+
+.home-left div button:hover{
+    padding: 7px 20px;
+    background-color: var(--color--blue);
+    color: var(--color--white);
+    border: 1px solid var(--color--white);
+}
+
+.home-left h1{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 100%;
+    padding: 0 2.5%;
+}
+
+.home-left h1 b{
+    font-weight: 500;
+    color: var(--color--blue);
+}
+
+.home-left form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 60%;
+    width: 100%;
+    padding: 0 2.5%;
+}
+
+.home-left form div:nth-child(1){
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    gap: 10px;
+    padding: 0;
+}
+
+.home-left form input{
+    height: 15%;
+    border: 1px solid var(--color--black);
+    border-radius: 10px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+.home-left form input::placeholder{
+    font-size: .8rem;
+}
+
+.home-left form div:nth-child(1) input{
+    height: 100%;
+    padding: 0px 8px;
+    width: 50%;
+}
+
+.home-left form div:nth-child(n + 1){
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    gap: 10px;
+    padding: 0;
+}
+
+.home-left form div:nth-child(n + 1) input{
+    height: 100%;
+    padding: 0px 10px;
+    width: 50%;
+}
+
+.home-left form select{
+    border: 1px solid var(--color--black);
+    color: var(--color--black);
+    border-radius: 10px;
+    width: 100%;
+    height: 15%;
+    margin-top: 10px;
+    padding: 0 1%;
+    font-size: .8rem;
+}
+
+.home-left form button{
+    width: 100%;
+    height: 15%;
+    margin-top: 5px;
+    background-color: var(--color--blue);
+    color: var(--color--white);
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.home-left form button:hover{
+    background-color:  var(--color--dark--blue);
+    border: 1px solid var(--color--blue);
+    color: var(--color--blue);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.home-left form p {
+    font-size: .7rem;
+    margin-top: 15px;
+    color: var(--color--black);
+    position: relative;
+}
+
+.background-home{
+    position: absolute;
+    z-index: -1;
+    background: #000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background-home::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/04c6fd9b-1f06-463e-f4ef-bbedce56f800/public');
+    background-position: center;
+    background-attachment: fixed; /* Comportamento fixo padrão */
+    filter: contrast(110%) brightness(110%);
+    background-size: cover;
+    opacity: .3;
+}
+
+/* Remover background-attachment fixo em dispositivos móveis */
+@media (max-width: 768px) {
+    .background-home::before {
+        background-attachment: scroll; /* Removendo o 'fixed' em telas pequenas */
+        background-size: cover; /* Mantendo a imagem de fundo cobrindo o contêiner */
+    }
+}
+
+.background-home::after{
+    content: '';
+    position: absolute;
+    z-index: 3;
+    border-image: fill 0 linear-gradient(35deg, #0001, #179cd6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .5;
+}
+
+@keyframes ProductEffect{
+    0% {
+        transform: rotate(-1deg);
+    }
+
+    50% {
+        transform: rotate(1deg) scale(1.05);
+    }
+    
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+.home-right{
+    width: 55%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes HomeAnimation{
+    0%{
+        transform: translateX(2px);
+    }
+
+    50%{
+        transform: translateX(-2px);
+    }
+}
+
+.custom-shape-divider-bottom-1733143583 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1733143583 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 300px;
+}
+
+.custom-shape-divider-bottom-1733143583 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.home-right img{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    right: -20%;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+}
+
+
+
+@media (max-width: 768px){
+    .home{
+        padding: 5% 2.5% -5% 2.5%;
+    }
+
+    .custom-shape-divider-bottom-1733143583 {
+        display: none;
+    }
+    
+    .home-left{
+        width: 100%;
+        height: auto;
+        gap: 30px;
+    }
+
+    .home-left div{
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+    }
+
+    .home-left form div:nth-child(1) input{
+        padding: 10px;
+    }
+
+    .home-left form div:nth-child(n + 1) input{
+        padding: 10px;
+    }
+
+    .home-left form input{
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    .home-left form select{
+        margin-top: 5px;
+        padding: 12px;
+    }
+
+    .home-left button{
+        padding: 12px;
+    }
+
+    .home-left form p{
+        font-size: .6rem;
+    }
+
+    .home-left div button{
+        display: none;
+    }
+
+    .home-left h1{
+        font-size: 1.5rem;
+    }
+
+    .home-right{
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1240px){
+    .home-left{
+        width: 45%;
+    }
+}

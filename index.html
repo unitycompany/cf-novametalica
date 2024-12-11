@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Nova Metálica é uma empresa referência na fabricação de perfis para construção em Steel Frame, oferecendo soluções inovadoras e de alta qualidade para projetos eficientes e sustentáveis.">
+    <meta name="keywords" content="Nova Metálica, Construção Civil, Drywall, SteelFrame, Fast Drywall, Auraucária Perfis, Ananda Perfis, VL Perfil, Perfil Lider, Multi Perfil">
+
+    <link rel="icon" href="assets/avatar.ico">
+
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/variable.css">
+
+    <link rel="stylesheet" href="styles/section/home.css">
+    <link rel="stylesheet" href="styles/section/steelframe.css">
+    <link rel="stylesheet" href="styles/section/drywall.css">
+    <link rel="stylesheet" href="styles/section/qualidades.css">
+    <link rel="stylesheet" href="styles/section/diferencas.css">
+    <link rel="stylesheet" href="styles/section/diferencas2.css">
+    <link rel="stylesheet" href="styles/section/cta.css">
+    <link rel="stylesheet" href="styles/section/numeros.css">
+    <link rel="stylesheet" href="styles/section/footer.css">
+    <link rel="stylesheet" href="styles/section/sobre.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NHCBD628');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <title>Nova Metálica | Soluções Construtivas</title>
+
+</head>
+
+<body>
+
+    <section class="home" id="home">    
+        <div class="home-left" data-aos="fade-up" data-aos-delay="0">
+
+            <div data-aos="fade-up" data-aos-delay="100">
+                <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/6ad5c9d1-2895-4452-9899-fcb9f33cfc00/public" alt="logo da nova metálica">
+                <button>Quero comprar perfis de qualidade</button>
+            </div>
+
+            <h1 data-aos="fade-up" data-aos-delay="150">Construa de <b>Forma Mais Rápida e Eficiente </b></h1>
+
+
+            <form id="contactForm" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <input type="text" id="name" placeholder="Nome">
+                    <input type="tel" id="tel" placeholder="WhatsApp">
+                </div>
+                <input type="email" id="email" placeholder="E-mail">
+                <div>
+                    <input type="text" id="cidade" placeholder="Cidade">
+                    <input type="text" id="estado" placeholder="Estado">
+                </div>
+                <select>
+                    <option>Qual sua área de atuação?</option>
+                    <option>Arquitetura</option>
+                    <option>Engenharia</option>
+                    <option>Construtura</option>
+                    <option>Logista</option>
+                    <option>Reformas</option>
+                    <option>Outros</option>
+                </select>
+                <button type="submit" id="buttonSubmit">Enviar</button>
+
+                <p>*A suas informações serão utilizadas apenas para responder à sua solicitação. Confidencialidade garantida.</p>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const formElement = document.querySelector('#contactForm');
+                        const submitButton = formElement.querySelector('#buttonSubmit');
+                
+                        formElement.addEventListener('submit', function (event) {
+                            event.preventDefault();
+                
+                            const name = formElement.querySelector('#name').value.trim();
+                            const email = formElement.querySelector('#email').value.trim();
+                            const whatsapp = formElement.querySelector('#tel').value.trim();
+                            const cidade = formElement.querySelector('#cidade').value.trim();
+                            const estado = formElement.querySelector('#estado').value.trim();
+                            const areaAtuacao = formElement.querySelector('select').value;
+                
+                            if (!name || !email || !whatsapp || !cidade || !estado || !areaAtuacao) {
+                                alert("Por favor, preencha todos os campos corretamente.");
+                                return;
+                            }
+                
+                            displayLoadingOverlay(true);
+                
+                            const utms = getUTMs();
+                            const utmSource = utms.utm_source || 'orgânico';
+                            const utmMedium = utms.utm_medium || '';
+                            const utmCampaign = utms.utm_campaign || '';
+                            const utmContent = utms.utm_content || '';
+                            const utmTerm = utms.utm_term || '';
+                            const pageReferrer = window.location.href || 'URL não encontrada';
+                
+                            const payload = {
+                                rules: {
+                                    update: "false",
+                                    filter_status_update: "open",
+                                    equal_pipeline: "true",
+                                    status: "open",
+                                    validate_cpf: "false",
+                                },
+                                leads: [
+                                    {
+                                        id: "form-sistemas-steel-frame-asr",
+                                        user: name,
+                                        email: email,
+                                        name: name,
+                                        personal_phone: whatsapp,
+                                        mobile_phone: whatsapp,
+                                        cidade: cidade,
+                                        estado: estado,
+                                        areaAtuacao: areaAtuacao,
+                                        last_conversion: {
+                                            source: utmSource
+                                        },
+                                        custom_fields: {
+                                            uniqueId: generateUniqueId(),
+                                            utm_source: utmSource,
+                                            utm_medium: utmMedium,
+                                            utm_campaign: utmCampaign,
+                                            utm_content: utmContent,
+                                            utm_term: utmTerm,
+                                            page_referrer: pageReferrer
+                                        }
+                                    }
+                                ]
+                            };
+                
+                            fetch('https://app.pipe.run/webservice/integradorJson?hash=56c50ba8-44e9-42fd-ba51-93207130106f', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(payload)
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                console.log('Success:', data);
+                                displayLoadingOverlay(false);
+                                alert('Formulário enviado com sucesso!');
+                                formElement.reset();
+                            })
+                            .catch((error) => {
+                                console.error('Error:', error);
+                                displayLoadingOverlay(false);
+                                alert('Houve um erro ao enviar o formulário.');
+                            });
+                        });
+                
+                        function generateUniqueId() {
+                            return new Date().getTime().toString();
+                        }
+                
+                        function getUTMs() {
+                            const urlParams = new URLSearchParams(window.location.search);
+                            return {
+                                utm_source: urlParams.get('utm_source'),
+                                utm_medium: urlParams.get('utm_medium'),
+                                utm_campaign: urlParams.get('utm_campaign'),
+                                utm_content: urlParams.get('utm_content'),
+                                utm_term: urlParams.get('utm_term'),
+                            };
+                        }
+                
+                        function displayLoadingOverlay(show) {
+                            if (show) {
+                                console.log("Mostrando overlay de carregamento...");
+                            } else {
+                                console.log("Removendo overlay de carregamento...");
+                            }
+                        }
+                    });
+                </script>
+                
+
+            </form>
+
+
+        </div>
+
+        <div class="custom-shape-divider-bottom-1733143583">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <rect x="1200" height="3.6"></rect>
+                <rect height="3.6"></rect>
+                <path d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="background-home"></div>
+
+        <div class="home-right" data-aos="fade-up" data-aos-delay="0">
+            <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/04c6fd9b-1f06-463e-f4ef-bbedce56f800/public" data-aos="fade-up" data-aos-delay="100">
+        </div>
+    </section>
+
+    <section class="diferencas2" id="diferencas2">
+
+        <div class="diferencas2-stick" data-aos="fade-up" data-aos-delay="50">
+            <h1 data-aos="fade-up" data-aos-delay="150">Perfis Avulsos</h1>
+            <p data-aos="fade-up" data-aos-delay="200">São fabricados em tamanhos padrão (de 3 a 6m) e demandam ajustes no próprio local de construção, como cortes e furos. Eles são a opção mais tradicional, com flexibilidade para serem ajustados conforme necessário no momento da montagem.
+            </p>
+            <div data-aos="fade-up" data-aos-delay="250"></div>
+            <button onclick="document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })" data-aos="fade-up" data-aos-delay="300">Fazer meu orçamento agora!</button>
+        </div>
+
+        <div class="diferencas2-engenheirado" data-aos="fade-up" data-aos-delay="50">
+            <div data-aos="fade-up" data-aos-delay="150">
+            </div>
+            <h1 data-aos="fade-up" data-aos-delay="200">Estrutura Completa</h1>
+            <p data-aos="fade-up" data-aos-delay="300">São fabricados sob medida para cada obra, sendo pré-cortados e pré-perfurados antes de chegar ao local de obra, o que facilita a construção e reduz o tempo de montagem.</p>
+
+            <button onclick="document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })" data-aos="fade-up" data-aos-delay="400">Fazer meu orçamento agora!</button>
+        </div>
+
+        <div class="custom-shape-divider-top-1733145735">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <script>
+
+            const faixa = document.querySelector('.faixa');
+            const text = faixa.querySelector('p');
+            const cloneCount = 5; // Número de clones adicionais para preencher a tela
+
+            // Clona o texto repetidamente para preencher a faixa
+            for (let i = 0; i < cloneCount; i++) {
+                const clone = text.cloneNode(true);
+                faixa.appendChild(clone);
+            }
+
+            // Configura a rolagem
+            let offset = 0;
+            function animateScroll() {
+                offset -= 3; // Velocidade da rolagem
+                faixa.style.transform = `translateX(${offset}px)`;
+
+                // Reinicia quando o primeiro texto sai completamente da tela
+                if (Math.abs(offset) >= text.offsetWidth) {
+                    offset = 0;
+                }
+
+                requestAnimationFrame(animateScroll);
+            }
+
+            // Inicia a animação
+            animateScroll();
+
+        </script>
+
+    </section>
+
+    <section class="steelframe" id="steelframe">
+        <div class="steelframe-galery swiper-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/558c89cb-af72-4afb-e85a-3417739ace00/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/38c4a1bf-e77c-4a75-d61b-be4615bdb000/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/aed5b424-88eb-4d21-1c74-2746f8666000/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2f0eb960-1985-49a6-27e0-f07a8a11c200/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/614ca8fa-84cf-4eb5-8d4c-400b20514000/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2b2c1bb2-a7a4-4959-85f6-dd8817200300/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/63c902b7-6285-40fe-ca08-326956731200/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/52b0606d-7a73-47f1-aea4-4a9f6b482400/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e4b5afd9-7d9b-46b9-6831-612af9eb5800/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b364b71b-511c-486c-d7bf-64eafef17d00/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/905a2bd1-a4b0-4a24-1c6d-83c379273a00/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2fa0f1ae-a40b-4019-1def-10beff57a300/public" loading="lazy"></div>
+            </div>
+            <!-- Botões de navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <div class="steelframe-text">
+            <h1 data-aos="fade-up" data-aos-delay="100"><b>Steel Frame</b></h1>
+            <p data-aos="fade-up" data-aos-delay="150">O Steel Frame é mais do que um método construtivo: é uma revolução na forma de construir. Leve, resistente e sustentável, ele une o que há de melhor em eficiência, qualidade e custo-benefício. 
+                Com estruturas de aço galvanizado, oferece maior durabilidade e segurança à obra, reduzindo custos de manutenção e logística. Além disso, o Steel Frame permite obras até 4x mais rápidas e projetos personalizados para qualquer segmento.
+                </p>
+
+    
+            <div data-aos="fade-up" data-aos-delay="400">   
+                <div class="steelframe-products" data-target="0">Guia ( 90, 140 )</div>
+                <div class="steelframe-products" data-target="4">Montante ( 90, 140 )</div>
+                <div class="steelframe-products" data-target="8">Treliça pronta</div>
+                <div class="steelframe-products" data-target="10">Cartola ( 0,80 - 0,95 )</div>
+            </div>
+
+            <script>
+                // Certifique-se de que o Swiper foi carregado corretamente
+                document.addEventListener('DOMContentLoaded', function () {
+                    const swiper = new Swiper('.steelframe-galery', {
+                        loop: true, // Se necessário, para permitir navegação contínua
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        },
+                        autoplay: {
+                            delay: 3000, // Tempo em milissegundos entre cada slide (3 segundos neste caso)
+                            disableOnInteraction: false, // Permite que o autoplay continue mesmo após interação com o swiper
+                            pauseOnMouseEnter: true // Para o autoplay quando o mouse está em cima
+                        },
+                        touchStartPreventDefault: true, // Previne o autoplay ao tocar no carrossel com o dedo
+                    });
+            
+                    // Seleciona todos os botões de produto
+                    const productButtons = document.querySelectorAll('.steelframe-products');
+            
+                    // Adiciona o evento de clique em cada botão
+                    productButtons.forEach(button => {
+                        button.addEventListener('click', function () {
+                            // Pega o índice do slide de destino
+                            const targetIndex = parseInt(this.getAttribute('data-target'), 10);
+                            // Move o swiper para o slide correspondente, ajustando para o loop
+                            swiper.slideTo(targetIndex + 1); // Adiciona +1 para corresponder ao índice correto dentro do loop
+                        });
+                    });
+                });
+            </script>
+            
+            
+            
+    
+            <button onclick="document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })" data-aos="fade-up" data-aos-delay="400">Solicitar um orçamento!</button>
+        </div>
+    </section>
+    
+    <section class="drywall" id="drywall">
+
+        <div class="custom-shape-divider-top-1733144192">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="drywall-text">
+            <h1 data-aos="fade-up" data-aos-delay="100"><b>Drywall</b></h1>
+            <p data-aos="fade-up" data-aos-delay="150">Uma solução inteligente para conforto termoacústico, o Drywall é ideal para divisórias e forros, oferecendo um acabamento de qualidade para atender qualquer projeto. 
+                Os perfis para Drywall são fabricados em aço galvanizado e são, amplamente, utilizados em obras de pequeno a grande porte, como residências, escolas, hospitais, prédios comerciais, entre outros.
+                </p>
+    
+            <!-- <article onclick="document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })" data-aos="fade-up" data-aos-delay="200">
+                <h2>Compre direto da fábrica</h2>
+                <img src="assets/logo-black-nova.png" alt="logo da nova metálica">
+            </article> -->
+    
+            <div data-aos="fade-up" data-aos-delay="300">   
+                <div class="drywall-products" data-target="0">Guia ( 48 - 70 - 90 )</div>
+                <div class="drywall-products" data-target="3">Montante ( 48 - 70 - 90 )</div>
+                <div class="drywall-products" data-target="6">Perfil F530</div>
+                <div class="drywall-products" data-target="8">Tabicas</div>
+                <div class="drywall-products" data-target="10">Cantoneiras</div>
+            </div>
+    
+            <button onclick="document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })" data-aos="fade-up" data-aos-delay="400">Solicitar um orçamento!</button>
+        </div>
+
+        <div class="drywall-galery swiper-container" data-aos="fade-up" data-aos-delay="300">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2f30c94e-1611-4015-c691-7162cab3be00/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1ce1f7dc-e187-4bea-3a32-78de3f325600/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/fd7fdce9-d160-4036-a91a-c545e930ca00/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/cb87498e-06e7-4915-e4dd-1a7b50cd1600/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/eb7466a2-9675-42fd-b546-9a19a172d400/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/eda760d6-d7d4-4e40-4e8e-eebef1d28c00/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c4f7d3af-5379-42c3-f4a8-9d2257b3f800/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/fd9ec41a-2da5-4c06-53a2-1c0241d7be00/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e99cd0f8-ab9e-4ced-33d7-d10fc3254900/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ae6072ba-99cf-48a2-7c79-e66892468900/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/51e9edf7-20b9-43d2-911e-79fd444a6200/public" loading="lazy"></div>
+                <div class="swiper-slide"><img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2a75b948-19b1-40bb-7f09-61ae89a72300/public" loading="lazy"></div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const swiper = new Swiper('.drywall-galery', {
+                    loop: true, 
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev'
+                    },
+                    autoplay: {
+                        delay: 3000, 
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true 
+                    },
+                    touchStartPreventDefault: true, 
+                });
+        
+                const productButtons = document.querySelectorAll('.drywall-products');
+        
+                productButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+
+                        const targetIndex = parseInt(this.getAttribute('data-target'), 10);
+
+                        swiper.slideTo(targetIndex + 1); 
+                    });
+                });
+            });
+        </script>
+        
+        
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="sobre-left">
+            <img src="./assets/logo-black-nova.png">
+            <h1>Conheça a Nova Metálica</h1>
+            <p>Somos a primeira fábrica de perfis para <b>Steel Frame e Drywall do Rio de Janeiro</b>, uma referência em qualidade e tecnologia para o setor da construção civil. <br><br>
+            Com a missão de oferecer <b>perfis metálicos normatizados e fabricados com aço 100% nacional</b>, estamos equipados com tecnologia de ponta, como as avançadas máquinas F325iT FRAMECAD e equipamentos Metalso para Drywall, garantindo precisão, eficiência e agilidade na produção.<br><br>
+            Escolher a Nova Metálica é <b>optar por inovação, custo-benefício e uma parceria que coloca a qualidade em primeiro lugar.</b>
+            </p>
+            <button onclick="document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })">Solicitar orçamento agora!</button>
+        </div>
+        <div class="sobre-right">
+            <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/55cff96a-064f-4b0b-3265-4d0a54785300/public" alt="foto do galpao da nova metalica">
+        </div>
+    </section>
+
+
+    <section class="qualidades" id="qualidades">
+        <div class="qualidade-title">
+            <h1>Diferenciais</h1>
+        </div>
+        <div class="qualidades-cards">
+            <div class="qualidades-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="qualidades-card-icon" data-aos="fade-up" data-aos-delay="250">
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/308533e6-e990-4d5c-1be1-c2bf03f02100/public">
+                </div>
+                <div class="qualidades-card-text">
+                    <h2 data-aos="fade-up" data-aos-delay="300">Produtos Nacionais</h2>
+                    <p data-aos="fade-up" data-aos-delay="400">Garantimos perfis para Steel Frame e Drywall 100% normatizados, fabricados, exclusivamente, com aço de siderúrgicas brasileiras.</p>
+                    <button onclick="document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })" data-aos="fade-up" data-aos-delay="500">Solicitar orçamento</button>
+                </div>
+            </div>
+
+            <div class="qualidades-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="qualidades-card-icon" data-aos="fade-up" data-aos-delay="250">
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b6512150-2ae3-48a9-a04b-4069b4561c00/public">
+                </div>
+                <div class="qualidades-card-text">
+                    <h2 data-aos="fade-up" data-aos-delay="300">Soluções Eficientes</h2>
+                    <p data-aos="fade-up" data-aos-delay="400">Oferecemos a menor taxa de aço do mercado, resultando em estruturas metálicas mais leves e econômicas.</p>
+                    <button onclick="document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })" data-aos="fade-up" data-aos-delay="500">Solicitar orçamento</button>
+                </div>
+            </div>
+
+            <div class="qualidades-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="qualidades-card-icon" data-aos="fade-up" data-aos-delay="250">
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/0aebed1a-10df-4cda-60a8-a963ca6c4700/public">
+                </div>
+                <div class="qualidades-card-text">
+                    <h2 data-aos="fade-up" data-aos-delay="300">Tecncologia de Ponta</h2>
+                    <p data-aos="fade-up" data-aos-delay="400">Com tecnologia FRAMECAD e máquinas de telhas termoacústicas, garantimos precisão e inovação em cada perfil fabricado.</p>
+                    <button onclick="document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })" data-aos="fade-up" data-aos-delay="500">Solicitar orçamento</button>
+                </div>
+            </div>
+
+            <div class="qualidades-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="qualidades-card-icon" data-aos="fade-up" data-aos-delay="250">
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/109f2876-efec-42c7-3912-00d8d777f700/public">
+                </div>
+                <div class="qualidades-card-text">
+                    <h2 data-aos="fade-up" data-aos-delay="300">Parcerias Estratégicas</h2>
+                    <p data-aos="fade-up" data-aos-delay="400">Parcerias com CSN Siderúrgica, ArcellorMittal, Saint-Gobain e STO Brasil para maior qualidade.</p>
+                    <button onclick="document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })" data-aos="fade-up" data-aos-delay="500">Solicitar orçamento</button>
+                </div>
+            </div>
+        </div>
+
+          <script>
+            VanillaTilt.init(document.querySelectorAll(".qualidades-card"), {
+		    max: 10,
+		    speed: 100
+	        });
+          </script>
+
+        <div class="qualidades-video">
+            <div class="qualidades-video-text">
+                <h2 data-aos="fade-up" data-aos-delay="100">Como fabricamos nossos perfis</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Nossos perfis são fabricados com aço 100% nacional, fornecido por parceiros de renome como ArcelorMittal e CSN Siderúrgica, garantindo qualidade e rastreabilidade, pois todo aço fornecido tem um certificado da usina com o ensaio técnico do lote.
+                Com tecnologia de ponta, utilizamos equipamentos avançados, como a máquina F325iT FRAMECAD, que possibilita cortes precisos e personalizados, tornando o nosso processo produtivo mais eficiente e versátil.
+                Para fabricação de perfis para Drywall, contamos com maquinário Metalso de última geração, assegurando maior qualidade em todos os perfis produzidos.
+                </p>
+                <button onclick="document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })" data-aos="fade-up" data-aos-delay="300">Solicitar orçamento</button>
+            </div>
+            <div class="qualidades-video-container" data-aos="fade-up" data-aos-delay="300">
+                <iframe title="Video Player" src="https://www.youtube.com/embed/KVCquOX5toQ" width="100%" height="100%" frameborder="0" border="0" scrolling="no" allowfullscreen allow="autoplay; fullscreen"></iframe>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="numeros" id="numeros">
+        <div class="numeros-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="numeros-card" data-aos="fade-up" data-aos-delay="200">
+                <h4>Perfis Normatizados</h4>
+                <span value="100">0</span>
+            </div>
+            <div class="numeros-card" data-aos="fade-up" data-aos-delay="300">
+                <h4>Aço Nacional</h4>
+                <span value="100">0</span>
+            </div>
+            <div class="numeros-card" data-aos="fade-up" data-aos-delay="400">
+                <h4>Clientes Satisfeitos</h4>
+                <span value="100">0</span>
+            </div>
+            <div class="numeros-card" data-aos="fade-up" data-aos-delay="500">
+                <h4>Qualidade Garantida</h4>
+                <span value="100">0</span>
+            </div>
+        </div>
+    
+        <script>
+            function animateCountUp(element, targetValue, duration) {
+                let startValue = 0;
+                let increment = targetValue / (duration / 50);
+    
+                function updateCounter() {
+                    startValue += increment;
+                    if (startValue < targetValue) {
+                        element.textContent = Math.floor(startValue) + '%';
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        element.textContent = targetValue + '%';
+                    }
+                }
+                updateCounter();
+            }
+    
+            function handleIntersect(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const span = entry.target;
+                        const targetValue = parseInt(span.getAttribute('value'), 10);
+                        animateCountUp(span, targetValue, 2000); // 2 segundos
+                        observer.unobserve(span);
+                    }
+                });
+            }
+    
+            const observer = new IntersectionObserver(handleIntersect, {
+                threshold: 0.5 // 50% visível
+            });
+    
+            document.querySelectorAll('.numeros span').forEach(span => observer.observe(span));
+        </script>
+    </section>
+
+    <section class="cta" id="cta">
+        <div class="cta-text">
+            <h1 data-aos="fade-up" data-aos-delay="100">Compre direto de quem fabrica e <b>garanta o melhor</b> para sua obra</h1>
+            <button onclick="document.querySelector('#home').scrollIntoView({ behavior: 'smooth' })" data-aos="fade-up" data-aos-delay="200">Solicitar meu orçamento agora!</button>
+        </div>
+
+        <div class="faq" data-aos="fade-up" data-aos-delay="100">
+            <h1>FAQ</h1>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                <p class="faq-question" data-aos="fade-up" data-aos-delay="200">Desenvolvemos projetos?
+                </p>
+                <button class="faq-toggle">
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Não, mas desenvolvemos o projeto estrutural em Steel Frame para clientes que já possuem o projeto arquitetônico da construção.
+                    </p>
+                </div>
+            </div>
+        
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                <p class="faq-question" data-aos="fade-up" data-aos-delay="300">Fornecemos mão de obra?
+                </p>
+                <button class="faq-toggle">
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Não, mas indicamos empresas parceiras para execução da construção.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
+                <p class="faq-question" data-aos="fade-up" data-aos-delay="400">Com quais materiais de construção trabalhamos?
+                </p>
+                <button class="faq-toggle">
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Apenas perfis para Steel Frame e Drywall normatizados.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const faqAnswer = faqItem.querySelector('.faq-answer');
+
+        // Close all open answers
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            if (answer !== faqAnswer) {
+                answer.classList.remove('active');
+            }
+        });
+
+        // Toggle current answer
+        faqAnswer.classList.toggle('active');
+
+        // Update icon
+        document.querySelectorAll('.faq-toggle .icon').forEach(icon => {
+            icon.textContent = '+';
+        });
+        const icon = button.querySelector('.icon');
+        icon.textContent = faqAnswer.classList.contains('active') ? '-' : '+';
+    });
+});
+
+        </script>
+
+    </section>
+
+    <footer class="footer" id="footer">
+
+        <div>
+            <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/60c93bbf-23f0-4352-555d-539f22dbb300/public" alt="logo da nova metalica">
+        </div>
+        <div>
+            <p>Todos os direitos reservados | &copy 2024</p>
+            <p>Desenvolvido por <a href="https://www.linkedin.com/in/aleph-ramos" target="_blank">Aleph</a></p>
+        </div>
+
+        <div class="custom-shape-divider-top-1733147535">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Inicializando o AOS -->
+    <script>
+        AOS.init(); // Inicializa o AOS
+        AOS.init({
+  disable: function() {
+    return window.innerWidth < 768; // Desativa animações em telas menores que 768px
+  }
+});
+    </script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHCBD628"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+</body>
+</html>
