@@ -1,3 +1,29 @@
+
+.norma{
+    width: 100%;
+    padding: 0 5%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    height: 30vh;
+    background-color: var(--color--dark--blue);
+    color: var(--color--white);
+}
+
+.norma h1{
+    font-size: 28px;
+    font-weight: 400;
+    width: 40%;
+}
+
+.norma p {
+    font-size: 14px;
+    width: 50%;
+}
+
 .sobre{
     height: 70vh;
     width: 100%;
@@ -73,6 +99,18 @@
 }
 
 @media (max-width: 768px){
+    .norma{
+        height: 50vh;
+        gap: 50px;
+    }
+
+    .norma h1 {
+        width: 100%;
+    }
+
+    .norma p{
+        width: 90%;
+    }
     .sobre{
         flex-direction: column;
         height: auto;
